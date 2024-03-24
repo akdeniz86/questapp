@@ -1,5 +1,9 @@
 package com.project.questapp.repository;
 
-public interface LikeRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.project.questapp.model.Like;
+
+public interface LikeRepository extends JpaRepository<Like, Long>{
 
 }
