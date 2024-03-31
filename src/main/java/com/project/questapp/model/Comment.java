@@ -31,8 +31,11 @@ public class Comment {
 	@JsonIgnore
 	Post post;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	//EAGER-Postu çektiğimde user da beraber gelsin
+	//LAZY - Postu çektiğimde user i hemen getirme
+	@ManyToOne(fetch = FetchType.LAZY )
 	@JoinColumn(name = "user_id", nullable = false)
+	//user silinirse ilgili postlarıda sil
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	@JsonIgnore
 	User user;
