@@ -30,7 +30,7 @@ public class UserController {
 	public List<User> getAllUsers(){
 		return userService.getAllUsers();
 	}
-	//Read
+	//1 Read
 	@GetMapping("/{userId}")
 	public User getOneUser(@PathVariable Long userId) {
 		return userService.getOneUserById(userId);		
